@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+body {
+  background-color: #080808;
+}
+
+.wrap {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap .header {
+  width: 70%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1B1B1B;
+  border-radius: 0 0 8px 8px;
+}
+.wrap .header .nav-list {
+  display: flex;
+  gap: 80px;
+}
+.wrap .header .nav-list li {
+  list-style: none;
+  color: #9C9C9C;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+}
+.wrap .header .nav-list li:hover {
+  color: #3F8E00;
+}
+.wrap .header .nav-list li::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #3F8E00;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+.wrap .header .nav-list li:hover::after {
+  width: 100%;
+}
+.wrap .home-page {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.wrap .home-page .info-part {
+  width: 30%;
+}
+.wrap .home-page .info-part h1 {
+  color: #fff;
+  font-size: 60px;
+}
+.wrap .home-page .info-part .home-btn {
+  width: 300px;
+  height: 60px;
+  margin-top: 20px;
+  background: #3F8E00;
+  border: 1px solid #62BA1B;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.wrap .home-page .info-part .home-btn:hover {
+  transform: scale(1.05);
+}
+.wrap .home-page .photo-part img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+.wrap .based-in {
+  margin: 40px 0;
+  color: #fff;
+}
+.wrap .based-in .box-logo {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: 1px solid #1B1B1B;
+}
+.wrap .based-in .box-logo span {
+  color: orange;
+}
+.wrap .about-page {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .about-page .info-part {
+  width: 50%;
+}
+.wrap .about-page .info-part h2 {
+  color: #fff;
+  font-size: 40px;
+}
+.wrap .about-page .info-part p {
+  color: #9C9C9C;
+  margin-top: 20px;
+}
+.wrap .about-page .info-part a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 30px;
+  background: #3F8E00;
+  color: #fff;
+  text-decoration: none;
+}
+.wrap .skills-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+.wrap .skills-page .skill {
+  width: 200px;
+  height: 250px;
+  border: 2px solid #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.wrap .skills-page .skill:hover {
+  transform: scale(1.1);
+}
+.wrap .skills-page .skill .icon-part {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .skills-page .skill .icon-part img {
+  width: 90%;
+}
+.wrap .skills-page .skill .name-part {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .skills-page .skill .name-part h3 {
+  color: #fff;
+}
+.wrap .works-page {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 60px 0;
+}
+.wrap .works-page .project {
+  width: 350px;
+  border: 2px solid #1f1f1f;
+  padding: 10px;
+  text-align: center;
+}
+.wrap .works-page .project img {
+  width: 100%;
+}
+.wrap .works-page .project a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 20px;
+  background: #3F8E00;
+  color: #fff;
+  text-decoration: none;
+}
+.wrap .horizontal-line-footer {
+  width: 70%;
+  margin: 40px 0;
+}
+.wrap .footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+  margin-bottom: 40px;
+}
+.wrap .footer ul li {
+  list-style: none;
+}
+.wrap .footer .socials-page ul {
+  display: flex;
+  gap: 20px;
+}
+.wrap .footer .socials-page ul li {
+  font-size: 24px;
+  cursor: pointer;
+}
+.wrap .footer .socials-page ul li:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 900px) {
+  .wrap .home-page {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .wrap .home-page .info-part {
+    width: 80%;
+  }
+  .wrap .about-page .info-part {
+    width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .wrap .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}/*# sourceMappingURL=style.css.map */
