@@ -80,6 +80,7 @@ body {
                 margin-top: 20px;
                 background: #3F8E00;
                 border: 1px solid #62BA1B;
+                border-radius: 10px;
                 color: #fff;
                 font-size: 20px;
                 cursor: pointer;
@@ -87,6 +88,7 @@ body {
 
                 &:hover {
                     transform: scale(1.05);
+                    box-shadow: 0 0 30px #408e006b;
                 }
             }
         }
@@ -101,8 +103,13 @@ body {
     }
 
     .based-in {
-        margin: 40px 0;
+        width: 100%;
+        height: 10vh;
         color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
         .box-logo {
             margin-top: 10px;
@@ -152,20 +159,34 @@ body {
         justify-content: center;
         gap: 40px;
         flex-wrap: wrap;
-        margin: 40px 0;
+
+        .skills-title {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h2 {
+                color: #fff;
+                font-size: 30px;
+                font-weight: 600;
+            }
+        }
 
         .skill {
             width: 200px;
-            height: 250px;
+            height: 200px;
+            border-radius: 10px;
             border: 2px solid #1f1f1f;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            cursor: pointer;
             transition: 0.3s;
 
             &:hover {
-                transform: scale(1.1);
+                transform: scale(1.05);
             }
 
             .icon-part {
@@ -176,7 +197,7 @@ body {
                 align-items: center;
 
                 img {
-                    width: 90%;
+                    width: 70%;
                 }
             }
 
