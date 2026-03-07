@@ -313,7 +313,8 @@ body {
 }
 @media (max-width: 670px) {
   .wrap .skill-popup {
-    width: 350px;
+    width: 90%;
+    max-width: 400px;
     height: 270px;
     padding: 5px;
   }
@@ -324,6 +325,7 @@ body {
     gap: 10px;
   }
   .wrap .header .nav-list li {
+    white-space: nowrap;
     font-size: 14px;
   }
   .wrap .footer {
