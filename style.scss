@@ -382,8 +382,26 @@ body {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 670px) {
     .wrap {
+        .skill-popup {
+            width: 350px;
+            height: 270px;
+            padding: 5px;
+        }
+
+        .header {
+            height: 7vh;
+
+            .nav-list {
+                gap: 10px;
+
+                li {
+                    font-size: 14px;
+                }
+            }
+        }
+
         .footer {
             flex-direction: column;
             align-items: center;
