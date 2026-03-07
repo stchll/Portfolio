@@ -38,7 +38,7 @@ ui.nav_list.forEach((nav)=>{
     })
 })
 
-const token = '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'
+const token = 'none'
 
 async function fetchUser(params) {
     const username = 'stchll'
@@ -65,8 +65,6 @@ async function fetchUser(params) {
         document.getElementById("user-info").innerHTML = `<p style="color: red;">${error.message}</p>`;
       }
 }
-
-fetchUser()
 
 function calculateExpirience(startDate, endDate = new Date()) {
     let start = new Date(startDate);
