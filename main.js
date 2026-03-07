@@ -1,6 +1,4 @@
 const DATA = {
-
-
     SKILLS: [
         {
             name: 'HTML',
@@ -20,12 +18,55 @@ const DATA = {
 }
 
 const ui = {
+    nav_list: document.querySelectorAll('.nav-list li'),
+
     skills_page: document.querySelector('.skills-page'),
     skill_card: document.querySelector('.skill'),
 
     skill_popup: document.querySelector('.skill-popup'),
 }
 
+ui.nav_list.forEach((nav)=>{
+    nav.addEventListener('click',()=>{
+        const targetSection = document.querySelector(`.${nav.id}`)
+
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth',
+            })
+        }
+    })
+})
+
+const token = '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'
+
+async function fetchUser(params) {
+    const username = 'stchll'
+    const url = `https://api.github.com/users/${username}/repos`
+
+    try {
+        const response = await fetch(url, {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error(`Error: ${response.status}`);
+        }
+
+        const user = await response.json();
+        
+        console.log(user);
+        
+
+      } catch (error) {
+        console.error("Error fetching user info:", error);
+        document.getElementById("user-info").innerHTML = `<p style="color: red;">${error.message}</p>`;
+      }
+}
+
+fetchUser()
 
 function calculateExpirience(startDate, endDate = new Date()) {
     let start = new Date(startDate);
@@ -84,8 +125,8 @@ function SyncSkills() {
             const experienceTime = calculateExpirience(skill.experience).toString()
 
             if (experienceTime) {
-                ui.skill_popup.querySelector('.popup-skill-exp').textContent = experienceTime
-                ui.skill_popup.querySelector('.popup-skill-tyr-date').textContent = skill.experience
+                ui.skill_popup.querySelector('.popup-skill-exp').textContent = 'Experience: ' + experienceTime
+                ui.skill_popup.querySelector('.popup-skill-tyr-date').textContent = 'First tried: ' + skill.experience
             }
         })
     }

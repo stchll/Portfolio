@@ -26,8 +26,8 @@ body {
   position: fixed;
   padding: 5px;
   z-index: 3;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   border-radius: 10px;
   display: none;
@@ -192,7 +192,7 @@ body {
 .wrap .skills-page .skills-title h2 {
   color: #fff;
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 700;
 }
 .wrap .skills-page .skill {
   width: 200px;
@@ -209,6 +209,7 @@ body {
 }
 .wrap .skills-page .skill:hover {
   transform: scale(1.05);
+  border: 1px solid rgba(98, 186, 27, 0.568627451);
 }
 .wrap .skills-page .skill .icon-part {
   width: 100%;
@@ -218,7 +219,7 @@ body {
   align-items: center;
 }
 .wrap .skills-page .skill .icon-part img {
-  width: 70%;
+  width: 60%;
 }
 .wrap .skills-page .skill .name-part {
   width: 100%;
@@ -283,12 +284,28 @@ body {
 }
 
 @media (max-width: 900px) {
+  .wrap .header .nav-list {
+    gap: 40px;
+  }
+  .wrap .header .nav-list li {
+    font-size: 15px;
+  }
   .wrap .home-page {
     flex-direction: column-reverse;
     text-align: center;
   }
   .wrap .home-page .info-part {
-    width: 80%;
+    width: 100%;
+  }
+  .wrap .home-page .info-part h1 {
+    font-size: 45px;
+  }
+  .wrap .home-page .photo-part {
+    width: 100%;
+  }
+  .wrap .home-page .photo-part img {
+    width: 250px;
+    height: auto;
   }
   .wrap .about-page .info-part {
     width: 80%;
