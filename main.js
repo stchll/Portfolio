@@ -11,8 +11,23 @@ const DATA = {
         },
 
         {
+            name: 'SCSS',
+            experience: '2025-04-18',           
+        },
+
+        {
             name: 'JavaScript',
             experience: '2025-06-04',            
+        },
+
+        {
+            name: 'GIT',
+            experience: '2025-10-29',            
+        },
+
+        {
+            name: 'NodeJs',
+            experience: '2026-03-01',            
         },
     ]
 }
