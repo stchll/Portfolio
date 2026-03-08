@@ -48,12 +48,13 @@ ui.nav_list.forEach((nav)=>{
         if (targetSection) {
             targetSection.scrollIntoView({
                 behavior: 'smooth',
+                
             })
         }
     })
 })
 
-const token = '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'
+const token = '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'
 
 async function fetchUser(params) {
     const username = 'stchll'

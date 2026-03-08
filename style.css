@@ -112,6 +112,7 @@ body {
   justify-content: space-around;
   align-items: center;
   margin-top: 50px;
+  scroll-margin-top: 10vh;
 }
 .wrap .home-page .info-part {
   width: 30%;
@@ -166,6 +167,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  scroll-margin-top: 10vh;
 }
 .wrap .about-page .info-part {
   width: 50%;
@@ -192,6 +194,7 @@ body {
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
+  scroll-margin-top: 22vh;
 }
 .wrap .skills-page .skills-title {
   width: 100%;
@@ -264,20 +267,56 @@ body {
 }
 .wrap .works-page .project {
   width: 350px;
-  border: 2px solid #1f1f1f;
-  padding: 10px;
-  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
 }
-.wrap .works-page .project img {
+.wrap .works-page .project .image-container {
   width: 100%;
 }
-.wrap .works-page .project a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 20px;
-  background: #3F8E00;
+.wrap .works-page .project .image-container img {
+  width: 100%;
+  border-radius: 10px;
+}
+.wrap .works-page .project .text-container {
+  width: 100%;
   color: #fff;
-  text-decoration: none;
+  display: flex;
+}
+.wrap .works-page .project .text-container .project-name {
+  font-size: 25px;
+  font-weight: 400;
+}
+.wrap .works-page .project .technologies-container {
+  width: 100%;
+}
+.wrap .works-page .project .controlls-container {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.wrap .works-page .project .controlls-container button {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 20px;
+  background-color: #3F8E00;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.wrap .works-page .project .controlls-container button:hover {
+  transform: scale(1.05);
+}
+.wrap .works-page .project .controlls-container .github-project-btn {
+  background-color: #080808;
+}
+.wrap .works-page .project .controlls-container .video-project-btn {
+  background-color: #5d0db9;
 }
 .wrap .horizontal-line-footer {
   width: 70%;
