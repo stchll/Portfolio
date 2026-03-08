@@ -54,7 +54,7 @@ ui.nav_list.forEach((nav)=>{
     })
 })
 
-const token = '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'
+const token = ''
 
 async function fetchUser(params) {
     const username = 'stchll'
@@ -150,3 +150,11 @@ SyncSkills()
 ui.skill_popup.querySelector('.popup-skill-close').addEventListener('click',()=>{
     ui.skill_popup.style.display = 'none'
 })
+
+const typingText = Typify('#typify-text', {
+  text: [`Hi , I'm Chepil Stepan`,`I'm a front-end developer!`,`Welcome to my Protfolio!`],
+  delay: 100,
+  loop: false,
+  cursor: true,
+  stringDelay: 1000,
+});

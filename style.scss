@@ -9,6 +9,21 @@ body {
     background-color: #080808;
 }
 
+@keyframes img-moving {
+    0% {
+        top: 20px;
+    }
+
+
+    50% {
+        top: -20px;
+    }
+
+    100% {
+        top: 20px;
+    }
+}
+
 .wrap {
     user-select: none;
     width: 100%;
@@ -83,6 +98,7 @@ body {
         backdrop-filter: blur(50px);
         border: 1px solid rgba(255,255,255,0.1);
         position: fixed;
+        z-index: 5;
 
 
         .nav-list {
@@ -123,17 +139,21 @@ body {
         width: 100%;
         min-height: 80vh;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         margin-top: 50px;
         scroll-margin-top: 10vh;
 
         .info-part {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
             width: 30%;
 
             h1 {
                 color: #fff;
                 font-size: 60px;
+                font-weight: 500;
             }
 
             .home-btn {
@@ -156,10 +176,32 @@ body {
         }
 
         .photo-part {
-            img {
-                width: 350px;
-                height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 50%;
+
+            .user-photo {
+                width: 45%;
                 border-radius: 50%;
+                position: relative;
+                transform: translate(-20%);
+                left: 42%;
+
+                z-index: 3;
+
+                animation: img-moving 2.5s ease infinite;
+            }
+
+            .user-photo-back {
+                position: relative;
+                width: 65%;
+                right: 19%;
+                filter: blur(10px);
+                transform: translate(-10%);
+
+                animation: img-moving 2s ease infinite;
             }
         }
     }
@@ -448,6 +490,10 @@ body {
 
             .info-part {
                 width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
                 
                 h1 {
                     font-size: 45px;
@@ -456,11 +502,6 @@ body {
 
             .photo-part {
                 width: 100%;
-                
-                img {
-                    width: 250px;
-                    height: auto;;
-                }
             }
         }
 
