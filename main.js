@@ -62,7 +62,6 @@ async function fetchUser(params) {
 
       } catch (error) {
         console.error("Error fetching user info:", error);
-        document.getElementById("user-info").innerHTML = `<p style="color: red;">${error.message}</p>`;
       }
 }
 
@@ -135,8 +134,3 @@ SyncSkills()
 ui.skill_popup.querySelector('.popup-skill-close').addEventListener('click',()=>{
     ui.skill_popup.style.display = 'none'
 })
-
-
-
-
-// console.log(getTimeBetween('2011-01-09').toString());

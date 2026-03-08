@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat Alternates", sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -209,7 +212,7 @@ body {
 }
 .wrap .skills-page .skill:hover {
   transform: scale(1.05);
-  border: 1px solid rgba(98, 186, 27, 0.568627451);
+  border: 1px solid rgba(98, 186, 27, 0.2274509804);
 }
 .wrap .skills-page .skill .icon-part {
   width: 100%;
@@ -271,6 +274,17 @@ body {
 .wrap .footer ul li {
   list-style: none;
 }
+.wrap .footer .contacts-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.wrap .footer .contacts-page ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .wrap .footer .socials-page ul {
   display: flex;
   gap: 20px;
@@ -330,6 +344,7 @@ body {
   }
   .wrap .footer {
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 30px;
   }
