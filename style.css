@@ -72,6 +72,10 @@ body {
   align-items: center;
   background-color: #1B1B1B;
   border-radius: 0 0 8px 8px;
+  background-color: rgba(100, 100, 100, 0.08);
+  backdrop-filter: blur(50px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: fixed;
 }
 .wrap .header .nav-list {
   display: flex;
@@ -107,6 +111,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 50px;
 }
 .wrap .home-page .info-part {
   width: 30%;
@@ -149,6 +154,8 @@ body {
   margin-top: 10px;
   padding: 10px 20px;
   border: 1px solid #1B1B1B;
+  border-radius: 10px;
+  cursor: pointer;
 }
 .wrap .based-in .box-logo span {
   color: orange;
