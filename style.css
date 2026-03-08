@@ -11,13 +11,13 @@ body {
 
 @keyframes img-moving {
   0% {
-    top: 20px;
+    top: 10px;
   }
   50% {
-    top: -20px;
+    top: -10px;
   }
   100% {
-    top: 20px;
+    top: 10px;
   }
 }
 .wrap {
