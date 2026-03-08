@@ -356,11 +356,13 @@ body {
 @media (max-width: 900px) {
     .wrap {
         .header {
+            width: 90%;
+
             .nav-list {
-                gap: 40px;
+                gap: 30px;
 
                 li {
-                    font-size: 15px;
+                    font-size: 17px;
                 }
                 
             }
@@ -414,10 +416,6 @@ body {
                 li {
                     white-space: nowrap;
                     font-size: 14px;
-                }
-
-                li.actve {
-
                 }
             }
         }

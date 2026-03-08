@@ -298,11 +298,14 @@ body {
 }
 
 @media (max-width: 900px) {
+  .wrap .header {
+    width: 90%;
+  }
   .wrap .header .nav-list {
-    gap: 40px;
+    gap: 30px;
   }
   .wrap .header .nav-list li {
-    font-size: 15px;
+    font-size: 17px;
   }
   .wrap .home-page {
     flex-direction: column-reverse;
