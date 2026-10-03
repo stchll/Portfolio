@@ -1,33 +1,37 @@
+const worksPage = document.getElementById("worksList");
+
+const projectTemplate = document.querySelector(".projectTemplate");
+
 const DATA = {
     SKILLS: [
         {
             name: 'HTML',
-            experience: '2024-12-27',            
+            experience: '2024-12-27',
         },
 
         {
             name: 'CSS',
-            experience: '2025-01-03',           
+            experience: '2025-01-03',
         },
 
         {
             name: 'SCSS',
-            experience: '2025-04-18',           
+            experience: '2025-04-18',
         },
 
         {
             name: 'JavaScript',
-            experience: '2025-06-04',            
+            experience: '2025-06-04',
         },
 
         {
             name: 'GIT',
-            experience: '2025-10-29',            
+            experience: '2025-10-29',
         },
 
         {
             name: 'NodeJs',
-            experience: '2026-03-01',            
+            experience: '2026-03-01',
         },
     ]
 }
@@ -41,65 +45,106 @@ const ui = {
     skill_popup: document.querySelector('.skill-popup'),
 }
 
-ui.nav_list.forEach((nav)=>{
-    nav.addEventListener('click',()=>{
+ui.nav_list.forEach((nav) => {
+    nav.addEventListener('click', () => {
         const targetSection = document.querySelector(`.${nav.id}`)
 
         if (targetSection) {
             targetSection.scrollIntoView({
                 behavior: 'smooth',
-                
+
             })
         }
     })
-})
+});
 
-const token = ''
+const token = "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";
 
-async function fetchUser(params) {
+async function fetchUser() {
     const username = 'stchll'
     const url = `https://api.github.com/users/${username}/repos`
 
     try {
-        const response = await fetch(url, {
-          headers: {
-            Authorization: `Bearer ${token}`
-          }
+        const response = await fetch(url,{
+             headers: {
+                Authorization: `earer: ${token}`
+             }
         });
 
         if (!response.ok) {
-          throw new Error(`Error: ${response.status}`);
+            throw new Error(`Error: ${response.status}`);
         }
 
         const user = await response.json();
-        
-        console.log(user);
-        
 
-      } catch (error) {
+        for (const repo of user) {
+            if (!repo.topics.includes("portfolio-site")) {
+                continue
+            }
+
+            console.log(repo);
+            
+
+            console.log(repo);
+
+            const imagePath = `https://raw.githubusercontent.com/${username}/${repo.name}/main/img/thumbnail.png`;
+
+            const project = projectTemplate.cloneNode(true);
+            project.className = "project";
+
+            const title = project.querySelector(".project-name");
+            title.textContent = repo.name
+
+            const img = project.querySelector(".product-img");
+            img.src = imagePath
+
+            const linkBtn = project.querySelector(".link-btn");
+            
+            if (repo.homepage) {
+                linkBtn.href = repo.homepage;
+            } else {
+                linkBtn.style.display = "none";
+            }
+            
+            const githubBtn = project.querySelector(".github-btn");
+
+            if (repo.html_url) {
+                githubBtn.href = repo.html_url;
+            } else {
+                githubBtn.style.display = "none";
+            }
+
+            worksPage.appendChild(project);
+        }
+
+
+
+    } catch (error) {
         console.error("Error fetching user info:", error);
-      }
+    }
 }
+
+fetchUser()
 
 function calculateExpirience(startDate, endDate = new Date()) {
     let start = new Date(startDate);
     let end = new Date(endDate);
-    
+
     let years = end.getFullYear() - start.getFullYear();
     let months = end.getMonth() - start.getMonth();
     let days = end.getDate() - start.getDate();
-    
+
     if (days < 0) {
         months--;
         let lastMonth = new Date(end.getFullYear(), end.getMonth(), 0);
         days += lastMonth.getDate();
     }
-    
+
     if (months < 0) {
         years--;
         months += 12;
     }
-    
+
     return {
         years: years,
         months: months,
@@ -111,7 +156,7 @@ function calculateExpirience(startDate, endDate = new Date()) {
             if (days > 0) result.push(days + ' d.');
 
             console.log(result);
-            
+
 
             return result.join(' ') || ' Fail.';
         }
@@ -127,13 +172,13 @@ function SyncSkills() {
 
 
         newSkill.querySelector('.skill-icon').src = './img/' + skill.name + '.png'
-        newSkill.querySelector('.skill-name').textContent = skill.name 
+        newSkill.querySelector('.skill-name').textContent = skill.name
 
-        newSkill.addEventListener('click',()=>{
+        newSkill.addEventListener('click', () => {
             ui.skill_popup.querySelector('.popup-skill-img').src = './img/' + skill.name + '.png'
             ui.skill_popup.querySelector('.popup-skill-name').textContent = skill.name
 
-            ui.skill_popup.style.display = 'block'
+            ui.skill_popup.style.top = "50%"
 
             const experienceTime = calculateExpirience(skill.experience).toString()
 
@@ -147,14 +192,14 @@ function SyncSkills() {
 
 SyncSkills()
 
-ui.skill_popup.querySelector('.popup-skill-close').addEventListener('click',()=>{
-    ui.skill_popup.style.display = 'none'
+ui.skill_popup.querySelector('.popup-skill-close').addEventListener('click', () => {
+    ui.skill_popup.style.top = "-200%"
 })
 
 const typingText = Typify('#typify-text', {
-  text: [`Hi , I'm Chepil Stepan`,`I'm a front-end developer!`,`Welcome to my Protfolio!`],
-  delay: 100,
-  loop: false,
-  cursor: true,
-  stringDelay: 1000,
+    text: [`Hi , I'm Chepil Stepan`, `I'm a front-end developer!`, `Welcome to my Protfolio!`],
+    delay: 100,
+    loop: false,
+    cursor: true,
+    stringDelay: 1000,
 });

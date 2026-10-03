@@ -1,143 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.0.1/css/all.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css'
+        integrity='sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=='
+        crossorigin='anonymous' />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:100,200,300,400,500,600,700,800,900"
+        rel="stylesheet">
     <script src="https://unpkg.com/typify.js@1.1.9/dist/typify.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
-<div class="wrap">
+    <div class="wrap">
 
-    <div class="skill-popup">
-        <div class="popup-header">
-            <h2 class="popup-skill-name">Skill Name</h2>
+        <div class="skill-popup">
+            <div class="popup-header">
+                <h2 class="popup-skill-name">Skill Name</h2>
 
-            <button class="popup-skill-close">X</button>
+                <button class="popup-skill-close">X</button>
+            </div>
+
+            <div class="popup-main">
+                <img src="" alt="" class="popup-skill-img">
+
+                <p class="popup-skill-exp">0years</p>
+                <p class="popup-skill-tyr-date">01.01.1980</p>
+            </div>
         </div>
 
-        <div class="popup-main">
-            <img src="" alt="" class="popup-skill-img">
+        <header class="header">
+            <ul class="nav-list">
+                <li id="home-page">Home</li>
+                <li id="about-page">About me</li>
+                <li id="skills-page">Skills</li>
+                <li id="works-page">Works</li>
+                <li id="footer">Contact</li>
+            </ul>
+        </header>
 
-            <p class="popup-skill-exp">0years</p>
-            <p class="popup-skill-tyr-date">01.01.1980</p>
-        </div>
+        <section class="home-page">
+            <div class="info-part">
+                <h1 id="typify-text">Hi , my name is Stepan!</h1>
+                <button class="home-btn">
+                    Hire me <i class="fa-light fa-message"></i>
+                </button>
+            </div>
+
+            <div class="photo-part">
+                <img src="./img/Photo.jpg" alt="Photo" class="user-photo">
+
+                <img src="./img/PhotoBackdrop.png" class="user-photo-back">
+            </div>
+        </section>
+
+        <section class="based-in">
+            <h3>Based in:</h3>
+            <div class="box-logo">
+                <h2><span>/</span>Creator IT Academy</h2>
+            </div>
+        </section>
+
+        <section class="about-page">
+            <div class="info-part">
+                <h2>Front End Developer</h2>
+                <p>
+                    As a Front-End developer studying at /Creator IT Academy, I have a small but growing experience.
+                    My goal is to create modern, user-friendly and effective web products.
+                    I am constantly improving my skills in HTML, CSS and other technologies.
+                    I am also engaged in 3D modeling and game development.
+                </p>
+                <a href="#">Resume</a>
+            </div>
+        </section>
+
+        <section class="skills-page">
+            <div class="skills-title">
+                <h2>
+                    Skills
+                    <i class="fa-solid fa-book"></i>
+                </h2>
+            </div>
+
+            <div class="skill">
+                <div class="icon-part">
+                    <img src="" alt="" class="skill-icon">
+                </div>
+                <div class="name-part">
+                    <h3 class="skill-name">SKILL NAME</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="works-page" id="worksPage">
+            <div class="works-title">
+                <h2>Works <i class="fa-solid fa-briefcase"></i></h2>
+            </div>
+
+            <div class="works-list" id="worksList"></div>
+        </section>
+
+        <hr class="horizontal-line-footer">
+
+        <footer class="footer">
+            <div class="contacts-page">
+                <h2>Contacts</h2>
+                <ul>
+                    <li><i class="fa-solid fa-phone"></i> +380960834692</li>
+                    <li><i class="fa-solid fa-envelope"></i> chepillstepan11@gmail.com</li>
+                </ul>
+            </div>
+
+            <div class="socials-page">
+                <h2>Socials</h2>
+                <ul>
+                    <li><i class="fa-brands fa-github"></i></li>
+                    <li><i class="fa-brands fa-telegram"></i></li>
+
+                </ul>
+            </div>
+        </footer>
     </div>
 
-    <header class="header">
-        <ul class="nav-list">
-            <li id="home-page">Home</li>
-            <li id="about-page">About me</li>
-            <li id="skills-page">Skills</li>
-            <li id="works-page">Works</li>
-            <li id="footer">Contact</li>
-        </ul>
-    </header>
-
-    <section class="home-page">
-        <div class="info-part">
-            <h1 id="typify-text">Hi , my name is Stepan!</h1>
-            <button class="home-btn">
-                Hire me <i class="fa-light fa-message"></i>
-            </button>
+    <section class="projectTemplate">
+        <div class="image-container">
+            <img src="./img/placeholder.jpg" alt="" class="product-img">
         </div>
 
-        <div class="photo-part">
-            <img src="./img/Photo.jpg" alt="Photo" class="user-photo">
-
-            <img src="./img/PhotoBackdrop.png" class="user-photo-back">
+        <div class="text-container">
+            <h3 class="project-name">${repo.name}</h3>
         </div>
-    </section>
 
-    <section class="based-in">
-        <h3>Based in:</h3>
-        <div class="box-logo">
-            <h2><span>/</span>Creator IT Academy</h2>
+        <div class="technologies-container">
+
+        </div>
+
+        <div class="controlls-container">
+            <a class="link-btn">
+                <i class="fa-solid fa-link"></i>
+            </a>
+
+            <a class="github-btn">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a class="video-btn">
+                <i class="fa-solid fa-video"></i>
+            </a>
         </div>
     </section>
 
-    <section class="about-page">
-        <div class="info-part">
-            <h2>Front End Developer</h2>
-            <p>
-                As a Front-End developer studying at /Creator IT Academy, I have a small but growing experience.
-                My goal is to create modern, user-friendly and effective web products.
-                I am constantly improving my skills in HTML, CSS and other technologies.
-                I am also engaged in 3D modeling and game development.
-            </p>
-            <a href="#">Resume</a>
-        </div>
-    </section>
-
-    <section class="skills-page">
-        <div class="skills-title">
-            <h2>Skills<i class="fa-light fa-book"></i></h2>
-        </div>
-
-        <div class="skill">
-            <div class="icon-part">
-                <img src="" alt="" class="skill-icon">
-            </div>
-            <div class="name-part">
-                <h3 class="skill-name">SKILL NAME</h3>
-            </div>
-        </div>
-    </section>
-
-    <section class="works-page">
-        <div class="works-title">
-            <h2>Works<i class="fa-regular fa-briefcase"></i></h2>
-        </div>
-
-        <div class="project">
-            <div class="image-container">
-                <img src="./img/placeholder.jpg" alt="">
-            </div>
-
-            <div class="text-container">
-                <h3 class="project-name">Project Name</h3>
-            </div>
-
-            <div class="technologies-container">
-                
-            </div>
-
-            <div class="controlls-container">
-                <button class="visit-project-btn"><i class="fa-regular fa-link"></i></button>
-                <button class="github-project-btn"><i class="fa-brands fa-github"></i></button>
-                <button class="video-project-btn"><i class="fa-regular fa-video"></i></button>
-            </div>
-        </div>
-    </section>
-
-    <hr class="horizontal-line-footer">
-
-    <footer class="footer">
-        <div class="contacts-page">
-            <h2>Contacts</h2>
-            <ul>
-                <li><i class="fa-solid fa-phone"></i> +380960834692</li>
-                <li><i class="fa-solid fa-envelope"></i> chepillstepan11@gmail.com</li>
-            </ul>
-        </div>
-
-        <div class="socials-page">
-            <h2>Socials</h2>
-            <ul>
-                <li><i class="fa-brands fa-github"></i></li>
-                <li><i class="fa-brands fa-telegram"></i></li>
-                
-            </ul>
-        </div>
-    </footer>
-
-</div>
-
-<script src="./main.js"></script>
+    <script src="./main.js"></script>
 
 </body>
+
 </html>
