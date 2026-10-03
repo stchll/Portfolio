@@ -58,18 +58,14 @@ ui.nav_list.forEach((nav) => {
     })
 });
 
-const token = "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";
+const token = "";
 
 async function fetchUser() {
     const username = 'stchll'
     const url = `https://api.github.com/users/${username}/repos`
 
     try {
-        const response = await fetch(url,{
-             headers: {
-                Authorization: `earer: ${token}`
-             }
-        });
+        const response = await fetch(url);
 
         if (!response.ok) {
             throw new Error(`Error: ${response.status}`);
